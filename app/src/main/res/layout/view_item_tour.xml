@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/margin_medium"
+    app:cardCornerRadius="@dimen/margin_large"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:weightSum="3">
+
+    <ImageView
+        android:id="@+id/ivTour"
+        android:layout_weight="1"
+        android:layout_width="170dp"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:padding="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:layout_toLeftOf="@id/tvRating"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_toLeftOf="@id/tvRating"
+            android:layout_margin="@dimen/margin_small"            android:text="Country"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:textColor="@color/colorTextGray"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDesc"
+            android:layout_toLeftOf="@id/tvRating"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Country"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_alignParentEnd="true"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_style"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableBottom="@drawable/ic_star"
+            android:padding="@dimen/margin_medium" />
+    </RelativeLayout>
+</LinearLayout>
+    </androidx.cardview.widget.CardView>

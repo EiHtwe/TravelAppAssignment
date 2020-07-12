@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/margin_large"
+    android:layout_marginRight="@dimen/margin_medium">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivCountry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/emptyimage" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New"
+            android:layout_gravity="start"
+            android:textColor="@color/color_full_white"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textStyle="bold"
+            android:textColor="@color/color_full_white"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:text="Thailand" />
+
+        <TextView
+            android:id="@+id/tvNoOfTours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/color_full_white"
+            android:text="18 Tours" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="#E9FFFFFF"
+            android:drawableBottom="@drawable/ic_star"
+            android:padding="@dimen/margin_medium" />
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

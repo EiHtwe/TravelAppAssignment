@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:contentScrim="@color/color_full_white"
+            app:expandedTitleGravity="start|top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimAnimationDuration="1000">
+
+
+            <ImageView
+                android:id="@+id/ivCountryImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/iv_headline_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/news_sample" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="Details"
+                app:titleTextColor="@color/color_full_white" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:background="@drawable/top_rounded_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/margin_large">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/lbl_s1"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_wifi"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="@string/lbl_s2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_wifi"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="@string/lbl_s3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_wifi"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/lbl_s4"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_wifi"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:background="@drawable/frame_rounded_style"
+                    android:backgroundTint="#FAF7F7"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/margin_medium_3"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:id="@+id/tvBooking"
+                        android:drawableLeft="@drawable/ic_wifi"
+                        android:text="Booking \n 8.0/10"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvReviews"
+                        android:text="Based on 30 views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:background="@drawable/frame_rounded_style"
+                    android:backgroundTint="#FAF7F7"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/margin_medium_3"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:id="@+id/tvHotelOur"
+                        android:drawableLeft="@drawable/ic_wifi"
+                        android:text="HotelOut \n 8.0/10"
+                        android:drawablePadding="@dimen/margin_large"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvReviews2"
+                        android:text="Based on 30 views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_xxlarge"
+                android:lineSpacingMultiplier="1.3"
+                android:padding="@dimen/margin_medium"
+                android:text="@string/sample_news_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

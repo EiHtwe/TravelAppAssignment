@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_medium"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_black_24dp" />
+
+    <TextView
+        android:layout_toRightOf="@id/ivMenu"
+        android:textAlignment="center"
+        android:text="Discount Tour"
+        android:textColor="@color/colorTextBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_below="@id/ivMenu"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/lbl_title"
+                android:textColor="@color/colorTextGray"
+                android:textSize="@dimen/text_heading_2x" />
+
+            <TextView
+                android:id="@+id/tvCountryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/lbl_country"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCountryName"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal"
+                tools:listitem="@layout/view_item_country" />
+
+            <TextView
+                android:id="@+id/tvTourName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvCountry"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="sans-serif-medium"
+                android:text="Popular Tours"
+                android:textSize="@dimen/text_regular_3x" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTourName"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="vertical" />
+
+            <include
+                android:id="@+id/vpEmpty"
+                layout="@layout/view_pod_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
